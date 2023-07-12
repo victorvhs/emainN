@@ -49,7 +49,7 @@ func Test_NewCamping_Not_Nil_Name(t *testing.T) {
 
 	_, err := NewCampaign("", content, shortDescription, contacts)
 
-	assertions.Equal("Name should not be empty", err.Error())
+	assertions.Equal("name should not be empty", err.Error())
 
 }
 
@@ -58,7 +58,7 @@ func Test_NewCamping_Not_Nil_Content(t *testing.T) {
 
 	_, err := NewCampaign(name, "", shortDescription, contacts)
 
-	assertions.Equal("Content should not be empty", err.Error())
+	assertions.Equal("content should not be empty", err.Error())
 
 }
 
@@ -67,6 +67,6 @@ func Test_NewCamping_Not_Nil_Contacts(t *testing.T) {
 
 	_, err := NewCampaign(name, content, shortDescription, []string{})
 
-	assertions.Equal("Contacts should not be empty", err.Error())
+	assertions.Equal("contacts should not be empty", err.Error())
 
 }

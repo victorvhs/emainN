@@ -21,11 +21,11 @@ type Campaign struct {
 func NewCampaign(name string, content string, shortDescription string, emails []string) (*Campaign, error) {
 
 	if name == "" {
-		return nil, errors.New("Name should not be empty")
+		return nil, errors.New("name should not be empty")
 	} else if content == "" {
-		return nil, errors.New("Content should not be empty")
+		return nil, errors.New("content should not be empty")
 	} else if len(emails) == 0 {
-		return nil, errors.New("Contacts should not be empty")
+		return nil, errors.New("contacts should not be empty")
 	}
 
 	contacts := make([]Contact, len(emails))
